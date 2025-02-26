@@ -22,9 +22,9 @@ class Date
 
     public Date(int year, int month, int day) 
     {
-        _year = ValidateMonth(year);
+        _year = ValidateYear(year);
         _month = ValidateMonth(month);
-        _day = ValidateMonth(day);
+        _day = ValidateDay(day);
     }
 
     public int Day
@@ -90,7 +90,7 @@ class Date
         throw new ArgumentException($"The day: {day}, no is valid.");
     }
 
-    private bool IsLeadYear (int year) 
+    private bool IsLeadYear(int year) 
     {
         return year % 400 == 0 || year % 4 == 0 && year % 100 != 0;
     }
