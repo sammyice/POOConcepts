@@ -4,8 +4,8 @@
 try
 {
     var date1 = new Date();
-    var date2 = new Date(1974, 9, 23);
-    var date3 = new Date(2020, 12, 3);
+    var date2 = new Date(1974, 12, 23);
+    var date3 = new Date(2020, 2, 29);
 
     date1.Year = 2025;
     date1.Month = 2;
