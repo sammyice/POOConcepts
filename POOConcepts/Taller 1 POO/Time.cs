@@ -79,7 +79,10 @@ namespace Taller_1_POO
 
         private int ValidHour(int hour)
         {
-            if (hour < 0 || hour >= 24) throw new ArgumentException($"The hour: {hour}, no is valid.");
+            if (hour < 0 || hour >= 24) 
+            {
+                throw new ArgumentException($"The hour: {hour}, no is valid.");
+            } 
             return hour;
         }
 
@@ -89,7 +92,6 @@ namespace Taller_1_POO
             {
                 throw new ArgumentException($"The minute {minute}, no is valid.");
             }
-          
             return minute;
         }
 
@@ -99,7 +101,6 @@ namespace Taller_1_POO
             {
                 throw new ArgumentException($"The second {second}, no is valid.");
             }
-            
             return second;
         }
 
