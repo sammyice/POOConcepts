@@ -22,7 +22,7 @@ namespace Taller_1_POO
 
         public Time(int hour)
         {
-            _hour = hour;
+            _hour = ValidHour(hour);
             _minute = 0;
             _second = 0;
             _millisecond = 0;
@@ -30,17 +30,17 @@ namespace Taller_1_POO
 
         public Time(int hour, int minute)
         {
-            _hour = hour;
-            _minute = minute;
+            _hour = ValidHour(hour);
+            _minute = ValidMinute(minute);
             _second = 0;
             _millisecond = 0;
         }
 
         public Time(int hour, int minute, int second)
         {
-            _hour = hour;
-            _minute = minute;
-            _second = second;
+            _hour = ValidHour(hour);
+            _minute = ValidMinute(minute);
+            _second = ValidSecond(second);
             _millisecond = 0;
         }
 
@@ -85,19 +85,30 @@ namespace Taller_1_POO
 
         private int ValidMinute(int minute)
         {
-            if (minute < 0 || minute >= 60) throw new ArgumentException($"The minute {minute}, no is valid.");
+            if (minute < 0 || minute >= 60) 
+            {
+                throw new ArgumentException($"The minute {minute}, no is valid.");
+            }
+          
             return minute;
         }
 
         private int ValidSecond(int second)
         {
-            if (second < 0 || second >= 60) throw new ArgumentException($"The second {second}, no is valid.");
+            if (second < 0 || second >= 60) 
+            {
+                throw new ArgumentException($"The second {second}, no is valid.");
+            }
+            
             return second;
         }
 
         private int ValidMillisecond(int millisecond)
         {
-            if (millisecond < 0 || millisecond >= 1000) throw new ArgumentException($"The millisecond {millisecond}, no is valid.");
+            if (millisecond < 0 || millisecond >= 1000) 
+            {
+                throw new ArgumentException($"The millisecond {millisecond}, no is valid.");
+            } 
             return millisecond;
         }
 
@@ -122,16 +133,21 @@ namespace Taller_1_POO
         {
             return (_hour * 60) + _minute;
         }
+
         public bool IsOtherDay(Time other)
         {
-            return (_hour + other._hour) >= 24;
+            int totalMilliseconds = this.ToMilliseconds() + other.ToMilliseconds();
+            return totalMilliseconds >= 24 * 60 * 60 * 1000; // Milisegundos en un día
         }
+
         public Time Add(Time other)
         {
-            int newHour = (_hour + other._hour) % 24;
-            int newMinute = (_minute + other._minute) % 60;
-            int newSecond = (_second + other._second) % 60;
-            int newMillisecond = (_millisecond + other._millisecond) % 1000;
+            int totalMilliseconds = this.ToMilliseconds() + other.ToMilliseconds();
+            int newHour = (totalMilliseconds / 3600000) % 24;
+            int newMinute = (totalMilliseconds / 60000) % 60;
+            int newSecond = (totalMilliseconds / 1000) % 60;
+            int newMillisecond = totalMilliseconds % 1000;
+
             return new Time(newHour, newMinute, newSecond, newMillisecond);
         }
     }
