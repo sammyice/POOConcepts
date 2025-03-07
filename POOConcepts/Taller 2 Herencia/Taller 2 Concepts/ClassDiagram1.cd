@@ -28,5 +28,12 @@
       <FileName>Rhombus.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Taller_2_Concepts.Rectangle">
+    <Position X="1" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAIAAAAAAAAAEAAAAAEAEAAAA=</HashCode>
+      <FileName>Rectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
