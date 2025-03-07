@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Taller_2_Concepts
 {
-    class Circle : GeometricFigure
+    public class Circle : GeometricFigure
     {
 
         private int _r;
