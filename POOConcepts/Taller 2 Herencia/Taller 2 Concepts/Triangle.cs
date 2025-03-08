@@ -45,7 +45,7 @@ namespace Taller_2_Concepts
             {
                 throw new Exception($"The height {h}, must be a positive value.");
             }
-            return c;
+            return h;
         }
     }
 }
