@@ -31,7 +31,7 @@ namespace Taller_2_Concepts
         {
             if (h <= 0)
             {
-                throw new Exception($"The height(H) must be a positive value.");
+                throw new Exception($"The height {h}, must be a positive value.");
             }
             return h;
         
