@@ -10,17 +10,17 @@ namespace Taller_2_Concepts
     public class Rhombus : Square
     {
 
-        private int _d1;
-        private int _d2;
+        private double _d1;
+        private double _d2;
 
-        public Rhombus(string name, int a, int d1, int d2) : base(name, a)
+        public Rhombus(string name, double a, double d1, double d2) : base(name, a)
         {
             _d1 = d1;
             _d2 = d2;
         }
 
-        public int D1 { get => _d1; set => _d1 = ValidateD1(value); }
-        public int D2 { get => _d2; set => _d2 = ValidateD2(value); }
+        public double D1 { get => _d1; set => _d1 = ValidateD1(value); }
+        public double D2 { get => _d2; set => _d2 = ValidateD2(value); }
 
         public override double GetArea()
         {
@@ -32,7 +32,7 @@ namespace Taller_2_Concepts
             return 4 * A; // El perímetro de un rombo es igual al lado * 4
         }
       
-        private int ValidateD1(int d1)
+        private double ValidateD1(double d1)
         {
             if (d1 <= 0)
             {
@@ -41,7 +41,7 @@ namespace Taller_2_Concepts
             return d1;
         }
 
-        private int ValidateD2(int d2)
+        private double ValidateD2(double d2)
         {
             if (d2 <= 0)
             {

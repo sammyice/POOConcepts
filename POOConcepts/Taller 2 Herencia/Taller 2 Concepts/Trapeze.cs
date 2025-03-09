@@ -8,14 +8,14 @@ namespace Taller_2_Concepts
 {
     public class Trapeze : Triangle
     {
-        private int _d;
+        private double _d;
 
-        public Trapeze(string name, int a, int b, int c, int h, int d) : base(name, a, b, c, h)
+        public Trapeze(string name, double a, double b, double c, double d, double h) : base(name, a, b, c, h)
         {
             _d = d;
         }
-
-        public int D { get => _d; set => _d = ValidateD(value); }
+        
+        public double D { get => _d; set => _d = ValidateD(value); }
 
         public override double GetArea()
         {
@@ -27,11 +27,11 @@ namespace Taller_2_Concepts
             return A + B + C + D; // Fórmula del perímetro
         }
 
-        private int ValidateD(int d)
+        private double ValidateD(double d)
         {
             if (d <= 0)
             {
-                throw new Exception($"The smaller base {d}, must be a positive value.");
+                throw new Exception($"The smaller base {Math.Round(d, 5)}, must be a positive value.");
             }
             return d;
         }

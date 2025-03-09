@@ -8,14 +8,14 @@ namespace Taller_2_Concepts
 {
     public class Parallelogram : Rectangle
     {
-        private int _h;
+        private double _h;
 
-        public Parallelogram(string name, int a, int b, int h) : base(name, a, b)
+        public Parallelogram(string name, double a, double b, double h) : base(name, a, b)
         {
             _h = h;
         }
 
-        public int H { get => _h; set => _h = ValidateH(value); }
+        public double H { get => _h; set => _h = ValidateH(value); }
 
         public override double GetArea()
         {
@@ -27,14 +27,14 @@ namespace Taller_2_Concepts
             return 2 * (A + B); // Fórmula del perímetro: 2 * (base + lado)
         }
 
-        private int ValidateH(int h)
+        private double ValidateH(double h)
         {
             if (h <= 0)
             {
                 throw new Exception($"The height {h}, must be a positive value.");
             }
             return h;
-        
+
         }
 
     }

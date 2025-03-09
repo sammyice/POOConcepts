@@ -8,15 +8,15 @@ namespace Taller_2_Concepts
 {
     public class Kite : Rhombus
     {
-        private int _b;
+        private double _b;
 
-        public Kite(string name, int a, int d1, int d2, int b) : base(name, a, d1, d2)
+        public Kite(string name, double a, double d1, double d2, double b) : base(name, a, d1, d2)
         {
             _b = b;
         }
 
 
-        public int B { get => _b; set => _b = ValidateB(value); }
+        public double B { get => _b; set => _b = ValidateB(value); }
 
         public override double GetArea()
         {
@@ -28,7 +28,7 @@ namespace Taller_2_Concepts
             return 2 * (A + B);  // Perímetro basado en lados y valores adicionale
         }
 
-        private int ValidateB(int b)
+        private double ValidateB(double b)
 
         {
             if (b <= 0)

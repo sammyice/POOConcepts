@@ -9,14 +9,14 @@ namespace Taller_2_Concepts
     public class Square : GeometricFigure
     {
 
-        private int _a;
+        private double _a;
 
-        public Square(string name, int a) : base(name)
+        public Square(string name, double a) : base(name)
         {
             _a = a;
         }
 
-        public int A { get => _a; set => _a = ValidateA(value); }
+        public double A { get => _a; set => _a = ValidateA(value); }
 
         public override double GetArea()
         {
@@ -28,7 +28,7 @@ namespace Taller_2_Concepts
             return 4 * A; // Fórmula del perímetro de un cuadrado: 4 * lado
         }
 
-        private int ValidateA(int a)
+        private double ValidateA(double a)
 
         {
             if (a <= 0)

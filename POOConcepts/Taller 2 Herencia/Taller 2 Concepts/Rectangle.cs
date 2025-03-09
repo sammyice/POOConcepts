@@ -8,14 +8,14 @@ namespace Taller_2_Concepts
 {
     public class Rectangle : Square
     {
-        private int _b;
+        private double _b;
 
-        public Rectangle(string name, int a, int b) : base(name, a)
+        public Rectangle(string name, double a, double b) : base(name, a)
         {
             _b = b;
         }
 
-        public int B { get => _b; set => _b = ValidateB(value); }
+        public double B { get => _b; set => _b = ValidateB(value); }
 
         public override double GetArea()
         {
@@ -27,7 +27,7 @@ namespace Taller_2_Concepts
             return 2 * (A + B); // Fórmula del perímetro: 2 * (base + altura)
         }
 
-        private int ValidateB(int b)
+        private double ValidateB(double b)
 
         {
             if (b <= 0)

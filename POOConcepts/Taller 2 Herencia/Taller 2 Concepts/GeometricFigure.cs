@@ -23,7 +23,7 @@ namespace Taller_2_Concepts;
 
     public override string ToString()
     {
-        return $"Figure: {Name}, Area: {GetArea():F2}, Perimeter: {GetPerimeter():F2}";
+        return $"{Name, -15}=>  Area.....:   {GetArea(),10:F5}   Perimeter:   {GetPerimeter(),10:F5}";
     }
 
     }

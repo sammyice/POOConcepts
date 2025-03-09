@@ -10,14 +10,14 @@ namespace Taller_2_Concepts
     public class Circle : GeometricFigure
     {
 
-        private int _r;
+        private double _r;
 
-        public Circle(string name, int r) : base(name)
+        public Circle(string name, double r) : base(name)
         {
             _r = r;
         }
 
-        public int R { get => _r; set => _r = ValidateR(value); }
+        public double R { get => _r; set => _r = ValidateR(value); }
 
         public override double GetArea()
         {
@@ -30,7 +30,7 @@ namespace Taller_2_Concepts
         }
 
 
-        private int ValidateR(int r)
+        private double ValidateR(double r)
 
         {
             if (r <= 0)

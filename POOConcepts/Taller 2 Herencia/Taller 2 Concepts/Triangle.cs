@@ -8,17 +8,17 @@ namespace Taller_2_Concepts
 {
     public class Triangle : Rectangle
     {
-        private int _c;
-        private int _h;
+        private double _c;
+        private double _h;
 
-        public Triangle(string name, int a, int b, int c, int h) : base(name, a, b)
+        public Triangle(string name, double a, double b, double c, double h) : base(name, a, b)
         {
             _c = c;
             _h = h;
         }
 
-        public int C { get => _c; set => _c = ValidateC(value); }
-        public int H { get => _h; set => _h = ValidateH(value); }
+        public double C { get => _c; set => _c = ValidateC(value); }
+        public double H { get => _h; set => _h = ValidateH(value); }
 
         public override double GetArea()
         {
@@ -30,7 +30,7 @@ namespace Taller_2_Concepts
             return A + B + C;  // El perímetro del triángulo es la suma de sus lados
         }
 
-        private int ValidateC(int c)
+        private double ValidateC(double c)
         {
             if (c <= 0)
             {
@@ -39,7 +39,7 @@ namespace Taller_2_Concepts
             return c;
         }
 
-        private int ValidateH(int h)
+        private double ValidateH(double h)
         {
             if (h <= 0)
             {
