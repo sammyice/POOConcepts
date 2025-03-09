@@ -31,7 +31,7 @@ namespace Taller_2_Concepts
         {
             if (d <= 0)
             {
-                throw new Exception($"The smaller base {Math.Round(d, 5)}, must be a positive value.");
+                throw new Exception($"The smaller base {d}, must be a positive value.");
             }
             return d;
         }
