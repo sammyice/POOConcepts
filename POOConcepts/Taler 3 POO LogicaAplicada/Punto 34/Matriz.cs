@@ -41,7 +41,7 @@ namespace RelojdeArena
             return n;
         }
 
-        // Método para llenar la matriz con la fórmula: Celda[i][j] = i + j
+        // Método para llenar la matriz con la fórmula
         public void LlenarMatriz()
         {
             for (int i = 0; i < _n; i++)
@@ -79,6 +79,7 @@ namespace RelojdeArena
         public void RelojdeArena()
         {
             Console.WriteLine("\nRELOJ DE ARENA:");
+      
             for (int i = 0; i < N; i++)
             {
                 for (int j = 0; j < N; j++)
