@@ -11,7 +11,7 @@ namespace RelojdeArena
         private int[,] _matriz; //Almacenará la matriz
         private int _n;
 
-        // Constructor por defecto, inicializa la matriz con un tamaño de 10
+        // Constructor por defecto, inicializa la matriz con un tamaño de 11
         public Matriz()
         {
             _n = 11;
